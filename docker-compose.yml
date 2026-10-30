@@ -1,0 +1,23 @@
+# Fixed project name so containers and volumes don't depend on the checkout folder's name.
+name: redwoodsearch
+
+services:
+  db:
+    # Postgres with the pgvector extension preinstalled.
+    image: pgvector/pgvector:pg17
+    environment:
+      POSTGRES_USER: redwood
+      POSTGRES_PASSWORD: redwood
+      POSTGRES_DB: redwood
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U redwood -d redwood"]
+      interval: 2s
+      timeout: 3s
+      retries: 15
+
+volumes:
+  pgdata:
