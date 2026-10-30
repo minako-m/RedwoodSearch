@@ -1,4 +1,4 @@
-.PHONY: setup db db-down api web test lint typecheck check
+.PHONY: setup db db-down api web check check-api check-web
 
 setup:  ## Install all dependencies and git hooks
 	uv sync
@@ -17,17 +17,16 @@ api:  ## Run the FastAPI dev server on :8000
 web:  ## Run the Vite dev server on :5173 (proxies /api to :8000)
 	cd web && pnpm dev
 
-test:
-	uv run pytest
-	cd web && pnpm test
+# CI runs check-api and check-web; keep every check defined here and only here.
+check: check-api check-web
 
-lint:
+check-api:  ## Lint, typecheck, and test the Python side
 	uv run ruff check .
 	uv run ruff format --check .
-	cd web && pnpm lint
-
-typecheck:
 	uv run mypy
-	cd web && pnpm typecheck
+	uv run pytest
 
-check: lint typecheck test  ## Everything CI runs
+check-web:  ## Lint, typecheck, and test the web side
+	cd web && pnpm lint
+	cd web && pnpm typecheck
+	cd web && pnpm test

@@ -1,10 +1,12 @@
 # Local-only docs
 Technical_Spec_*.pdf
+ARCHITECTURE_NOTES.md
 
 # Secrets
 .env
 .env.*
 !.env.example
+*.local
 
 # Python
 __pycache__/
@@ -20,11 +22,12 @@ build/
 
 # Node
 node_modules/
-web/dist/
 *.tsbuildinfo
+
+# Logs
+*.log
 
 # Editors / OS
 .DS_Store
-.vscode/*
-!.vscode/extensions.json
+.vscode/
 .idea/
