@@ -2,6 +2,9 @@
 Technical_Spec_*.pdf
 ARCHITECTURE_NOTES.md
 
+# Downloaded catalog data (large; re-fetch with `make fetch`)
+data/
+
 # Secrets
 .env
 .env.*

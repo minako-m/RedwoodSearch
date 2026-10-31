@@ -1,4 +1,4 @@
-.PHONY: setup db db-down api web check check-api check-web
+.PHONY: setup db db-down fetch api web check check-api check-web
 
 setup:  ## Install all dependencies and git hooks
 	uv sync
@@ -10,6 +10,9 @@ db:  ## Start local Postgres (pgvector) in Docker
 
 db-down:
 	docker compose down
+
+fetch:  ## Download this year's offered courses from ExploreCourses into data/raw (~5 min)
+	uv run python -m ingest.fetch
 
 api:  ## Run the FastAPI dev server on :8000
 	uv run uvicorn api.main:app --reload
