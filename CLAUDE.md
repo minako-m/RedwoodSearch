@@ -32,6 +32,8 @@ Do not change these without flagging it to the human first: `core/`, `.github/wo
 ```sh
 make setup      # uv sync, pnpm install, install git hooks
 make db         # start Postgres (needs Docker running)
+make fetch      # download this year's catalog into data/raw (gitignored, ~5 min)
+make fixture    # rebuild the test snapshot in ingest/fixtures from data/raw
 make api        # FastAPI on :8000
 make web        # Vite on :5173
 make check      # lint + typecheck + tests (what CI runs)

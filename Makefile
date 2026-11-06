@@ -1,4 +1,4 @@
-.PHONY: setup db db-down fetch api web check check-api check-web
+.PHONY: setup db db-down fetch fixture api web check check-api check-web
 
 setup:  ## Install all dependencies and git hooks
 	uv sync
@@ -13,6 +13,9 @@ db-down:
 
 fetch:  ## Download this year's offered courses from ExploreCourses into data/raw (~5 min)
 	uv run python -m ingest.fetch
+
+fixture:  ## Rebuild the ~200-course test snapshot in ingest/fixtures from data/raw
+	uv run python -m ingest.make_fixture
 
 api:  ## Run the FastAPI dev server on :8000
 	uv run uvicorn api.main:app --reload

@@ -1,0 +1,762 @@
+{
+  "ACCT 313": [
+    "component:CAS"
+  ],
+  "ACCT 691": [
+    "arranged-only",
+    "cross-listed"
+  ],
+  "AFRICAAM 274": [
+    "cross-listed",
+    "cross-listed with AMSTUD 274"
+  ],
+  "AFRICAAM 54N": [
+    "cross-listed",
+    "cross-listed with AMSTUD 54N"
+  ],
+  "AMSTUD 124L": [
+    "cross-listed",
+    "cross-listed with PSYCH 170"
+  ],
+  "AMSTUD 139C": [
+    "cross-listed",
+    "cross-listed with ENGLISH 139C"
+  ],
+  "AMSTUD 274": [
+    "cross-listed",
+    "ordinary"
+  ],
+  "AMSTUD 51N": [
+    "cross-listed",
+    "cross-listed with HISTORY 51N"
+  ],
+  "AMSTUD 54N": [
+    "cross-listed",
+    "ger:GER:EC-Gender"
+  ],
+  "ANTHRO 320A": [
+    "cross-listed",
+    "cross-listed with CSRE 389A"
+  ],
+  "ARCHLGY 105": [
+    "cross-listed",
+    "ordinary"
+  ],
+  "ARCHLGY 129C": [
+    "cross-listed",
+    "cross-listed with EBS 129"
+  ],
+  "ARCHLGY 229C": [
+    "cross-listed",
+    "cross-listed with EBS 129"
+  ],
+  "ARTHIST 119": [
+    "cross-listed",
+    "cross-listed with ITALIAN 149"
+  ],
+  "ARTHIST 218A": [
+    "cross-listed",
+    "ordinary"
+  ],
+  "ARTHIST 232": [
+    "cross-listed",
+    "cross-listed with HISTORY 232D"
+  ],
+  "ARTHIST 319": [
+    "cross-listed",
+    "cross-listed with ITALIAN 149"
+  ],
+  "ARTHIST 418A": [
+    "cross-listed",
+    "cross-listed with ARTHIST 218A"
+  ],
+  "ARTHIST 432D": [
+    "cross-listed",
+    "cross-listed with HISTORY 232D"
+  ],
+  "ASLLANG 22": [
+    "ger:Language"
+  ],
+  "ASNAMST 139C": [
+    "cross-listed",
+    "cross-listed with ENGLISH 139C"
+  ],
+  "BIO 149": [
+    "cross-listed",
+    "cross-listed with HUMBIO 161"
+  ],
+  "BIO 198X": [
+    "arranged-only"
+  ],
+  "BIO 249": [
+    "cross-listed",
+    "cross-listed with HUMBIO 161"
+  ],
+  "BIOE 261": [
+    "component:LAB"
+  ],
+  "BIOE 51": [
+    "mode:RA"
+  ],
+  "BIOS 406": [
+    "multi-meeting"
+  ],
+  "BIOS 424": [
+    "partial-quarter"
+  ],
+  "BIOS 437": [
+    "partial-quarter"
+  ],
+  "BMP 210B": [
+    "cross-listed",
+    "cross-listed with RAD 210B"
+  ],
+  "CEE 120C": [
+    "cross-listed",
+    "cross-listed with CEE 220C"
+  ],
+  "CEE 220C": [
+    "cross-listed",
+    "mode:OA"
+  ],
+  "CEE 374W": [
+    "component:RSC"
+  ],
+  "CHEM 31A": [
+    "anchor"
+  ],
+  "CHEMENG 177": [
+    "cross-listed",
+    "cross-listed with MATSCI 166"
+  ],
+  "CHEMENG 277": [
+    "cross-listed",
+    "cross-listed with MATSCI 166"
+  ],
+  "CHILATST 139C": [
+    "cross-listed",
+    "cross-listed with ENGLISH 139C"
+  ],
+  "CHPR 244": [
+    "weekend"
+  ],
+  "CLASSICS 105": [
+    "cross-listed",
+    "cross-listed with ARCHLGY 105"
+  ],
+  "CLASSICS 26N": [
+    "cross-listed",
+    "ger:GER:IHUM-3"
+  ],
+  "CLASSICS 42": [
+    "cross-listed",
+    "cross-listed with ITALIAN 181"
+  ],
+  "CME 801": [
+    "arranged-only"
+  ],
+  "COMM 108": [
+    "cross-listed",
+    "ordinary"
+  ],
+  "COMM 164": [
+    "cross-listed",
+    "cross-listed with PSYCH 170"
+  ],
+  "COMM 208": [
+    "cross-listed",
+    "cross-listed with COMM 108"
+  ],
+  "COMM 264": [
+    "cross-listed",
+    "cross-listed with PSYCH 170"
+  ],
+  "COMPLIT 181": [
+    "cross-listed",
+    "cross-listed with ITALIAN 181"
+  ],
+  "COMPLIT 293": [
+    "cross-listed",
+    "cross-listed with ENGLISH 293"
+  ],
+  "CS 106A": [
+    "anchor"
+  ],
+  "CS 106B": [
+    "anchor"
+  ],
+  "CS 107": [
+    "anchor"
+  ],
+  "CS 107ACE": [
+    "ordinary"
+  ],
+  "CS 109": [
+    "anchor"
+  ],
+  "CS 144": [
+    "component:TUT"
+  ],
+  "CS 161": [
+    "anchor"
+  ],
+  "CS 195": [
+    "end-no-start"
+  ],
+  "CS 217": [
+    "cross-listed",
+    "ordinary"
+  ],
+  "CS 221": [
+    "anchor"
+  ],
+  "CS 24": [
+    "cross-listed",
+    "cross-listed with SYMSYS 1"
+  ],
+  "CSRE 139C": [
+    "cross-listed",
+    "cross-listed with ENGLISH 139C"
+  ],
+  "CSRE 190A": [
+    "cross-listed",
+    "cross-listed with SYMSYS 193"
+  ],
+  "CSRE 389A": [
+    "cross-listed",
+    "ordinary"
+  ],
+  "CSRE 54N": [
+    "cross-listed",
+    "cross-listed with AMSTUD 54N"
+  ],
+  "DATASCI 200Q": [
+    "component:ISS",
+    "cross-listed"
+  ],
+  "DLCL 293": [
+    "cross-listed",
+    "cross-listed with ENGLISH 293"
+  ],
+  "EARTHSYS 171": [
+    "cross-listed",
+    "ordinary"
+  ],
+  "EARTHSYS 271": [
+    "cross-listed",
+    "cross-listed with EARTHSYS 171"
+  ],
+  "EBS 129": [
+    "cross-listed",
+    "ordinary"
+  ],
+  "EBS 229": [
+    "cross-listed",
+    "cross-listed with EBS 129"
+  ],
+  "ECON 1": [
+    "anchor"
+  ],
+  "ECON 200": [
+    "days-no-time"
+  ],
+  "EDUC 115N": [
+    "ordinary"
+  ],
+  "EDUC 389A": [
+    "cross-listed",
+    "cross-listed with CSRE 389A"
+  ],
+  "EE 244": [
+    "cross-listed",
+    "cross-listed with CS 217"
+  ],
+  "ENERGY 161": [
+    "cross-listed",
+    "cross-listed with EARTHSYS 171"
+  ],
+  "ENERGY 261": [
+    "cross-listed",
+    "cross-listed with EARTHSYS 171"
+  ],
+  "ENGLISH 11A": [
+    "ordinary"
+  ],
+  "ENGLISH 139C": [
+    "cross-listed",
+    "ordinary"
+  ],
+  "ENGLISH 180": [
+    "cross-listed",
+    "cross-listed with SYMSYS 193"
+  ],
+  "ENGLISH 293": [
+    "cross-listed",
+    "ger:WAY-CE"
+  ],
+  "ENGLISH 56": [
+    "ordinary"
+  ],
+  "ENGLISH 81": [
+    "cross-listed",
+    "cross-listed with ITALIAN 181"
+  ],
+  "EPS 171": [
+    "cross-listed",
+    "cross-listed with EARTHSYS 171"
+  ],
+  "EPS 271": [
+    "cross-listed",
+    "cross-listed with EARTHSYS 171"
+  ],
+  "ESS 60N": [
+    "component:ISF",
+    "cross-listed"
+  ],
+  "ETHICSOC 20": [
+    "cross-listed",
+    "ger:GER:EC-EthicReas"
+  ],
+  "FAMMED 252": [
+    "weekend"
+  ],
+  "FEMGEN 108A": [
+    "component:ITR"
+  ],
+  "FEMGEN 139C": [
+    "cross-listed",
+    "cross-listed with ENGLISH 139C"
+  ],
+  "FEMGEN 54N": [
+    "cross-listed",
+    "cross-listed with AMSTUD 54N"
+  ],
+  "FINANCE 632": [
+    "section-units-outside-range"
+  ],
+  "FINANCE 691": [
+    "cross-listed",
+    "cross-listed with ACCT 691"
+  ],
+  "FRENCH 149": [
+    "cross-listed",
+    "cross-listed with ITALIAN 149"
+  ],
+  "FRENCH 181": [
+    "cross-listed",
+    "cross-listed with ITALIAN 181"
+  ],
+  "FRENCH 219": [
+    "cross-listed",
+    "ordinary"
+  ],
+  "FRENCH 319": [
+    "cross-listed",
+    "cross-listed with FRENCH 219"
+  ],
+  "FRENCH 349": [
+    "cross-listed",
+    "cross-listed with ITALIAN 149"
+  ],
+  "GERMAN 105G": [
+    "cross-listed",
+    "cross-listed with HISTORY 105G"
+  ],
+  "GERMAN 181": [
+    "cross-listed",
+    "cross-listed with ITALIAN 181"
+  ],
+  "GLOBAL 104": [
+    "ordinary"
+  ],
+  "GSBGEN 508": [
+    "partial-quarter"
+  ],
+  "HAWALANG 1": [
+    "mode:OS"
+  ],
+  "HISTORY 105G": [
+    "cross-listed",
+    "ordinary"
+  ],
+  "HISTORY 107": [
+    "cross-listed",
+    "cross-listed with SOC 100"
+  ],
+  "HISTORY 11N": [
+    "cross-listed",
+    "cross-listed with CLASSICS 26N"
+  ],
+  "HISTORY 204E": [
+    "cross-listed",
+    "cross-listed with JEWISHST 204E"
+  ],
+  "HISTORY 232D": [
+    "cross-listed",
+    "ordinary"
+  ],
+  "HISTORY 281C": [
+    "component:COL"
+  ],
+  "HISTORY 307E": [
+    "cross-listed",
+    "cross-listed with JEWISHST 204E"
+  ],
+  "HISTORY 332D": [
+    "cross-listed",
+    "cross-listed with HISTORY 232D"
+  ],
+  "HISTORY 432D": [
+    "cross-listed",
+    "cross-listed with HISTORY 232D"
+  ],
+  "HISTORY 51N": [
+    "cross-listed",
+    "ordinary"
+  ],
+  "HISTORY 54N": [
+    "cross-listed",
+    "cross-listed with AMSTUD 54N"
+  ],
+  "HUMBIO 161": [
+    "cross-listed",
+    "ordinary"
+  ],
+  "ILAC 136": [
+    "ordinary"
+  ],
+  "ILAC 181": [
+    "cross-listed",
+    "cross-listed with ITALIAN 181"
+  ],
+  "IMMUNOL 209": [
+    "career:MED"
+  ],
+  "IMMUNOL 223": [
+    "cross-listed",
+    "multi-meeting"
+  ],
+  "INTLPOL 231B": [
+    "cross-listed",
+    "cross-listed with INTNLREL 131"
+  ],
+  "INTNLREL 104E": [
+    "cross-listed",
+    "cross-listed with JEWISHST 204E"
+  ],
+  "INTNLREL 131": [
+    "cross-listed",
+    "ordinary"
+  ],
+  "INTNLREL 74": [
+    "cross-listed",
+    "cross-listed with SYMSYS 193"
+  ],
+  "ITALIAN 149": [
+    "cross-listed",
+    "ordinary"
+  ],
+  "ITALIAN 181": [
+    "cross-listed",
+    "ordinary"
+  ],
+  "ITALIAN 232D": [
+    "cross-listed",
+    "cross-listed with HISTORY 232D"
+  ],
+  "ITALIAN 332D": [
+    "cross-listed",
+    "cross-listed with HISTORY 232D"
+  ],
+  "ITALIAN 349": [
+    "cross-listed",
+    "cross-listed with ITALIAN 149"
+  ],
+  "JAPANLNG 103": [
+    "ordinary"
+  ],
+  "JEWISHST 204E": [
+    "cross-listed",
+    "ger:GER:EC-GlobalCom"
+  ],
+  "LAW 7802": [
+    "career:LAW"
+  ],
+  "LAW 7820B": [
+    "component:SIM"
+  ],
+  "LAW 7849B": [
+    "weekend"
+  ],
+  "LAW 914B": [
+    "component:CLN"
+  ],
+  "LINGUIST 253": [
+    "cross-listed",
+    "cross-listed with CSRE 389A"
+  ],
+  "LINGUIST 35": [
+    "cross-listed",
+    "cross-listed with SYMSYS 1"
+  ],
+  "MATH 143": [
+    "ordinary"
+  ],
+  "MATH 19": [
+    "anchor"
+  ],
+  "MATH 51": [
+    "anchor"
+  ],
+  "MATSCI 166": [
+    "cross-listed",
+    "ordinary"
+  ],
+  "MATSCI 176": [
+    "cross-listed",
+    "cross-listed with MATSCI 166"
+  ],
+  "MED 255": [
+    "days-no-time"
+  ],
+  "MED 324E": [
+    "component:CLK"
+  ],
+  "MED 339B": [
+    "time-no-days"
+  ],
+  "MGTECON 691": [
+    "cross-listed",
+    "cross-listed with ACCT 691"
+  ],
+  "MI 19SC": [
+    "component:SCS"
+  ],
+  "MKTG 691": [
+    "cross-listed",
+    "cross-listed with ACCT 691"
+  ],
+  "MS&E 372": [
+    "component:RES"
+  ],
+  "MUSIC 157": [
+    "weekend"
+  ],
+  "MUSIC 169": [
+    "time-no-days"
+  ],
+  "MUSIC 214": [
+    "cross-listed",
+    "cross-listed with AMSTUD 274"
+  ],
+  "MUSIC 25": [
+    "ordinary"
+  ],
+  "MUSIC 72CZ": [
+    "component:PRA"
+  ],
+  "OB 691": [
+    "cross-listed",
+    "cross-listed with ACCT 691"
+  ],
+  "OCEANS 60N": [
+    "cross-listed",
+    "cross-listed with ESS 60N"
+  ],
+  "OIT 691": [
+    "cross-listed",
+    "cross-listed with ACCT 691"
+  ],
+  "OSPFLOR 31F": [
+    "section-units-outside-range"
+  ],
+  "OSPPARIS 199A": [
+    "arranged-only"
+  ],
+  "OSPSANTG 13S": [
+    "component:LNG"
+  ],
+  "PHIL 124P": [
+    "cross-listed",
+    "ordinary"
+  ],
+  "PHIL 154": [
+    "cross-listed",
+    "ordinary"
+  ],
+  "PHIL 2": [
+    "cross-listed",
+    "cross-listed with ETHICSOC 20"
+  ],
+  "PHIL 254": [
+    "cross-listed",
+    "cross-listed with PHIL 154"
+  ],
+  "PHIL 81": [
+    "cross-listed",
+    "cross-listed with ITALIAN 181"
+  ],
+  "PHIL 99": [
+    "cross-listed",
+    "cross-listed with SYMSYS 1"
+  ],
+  "PHYSICS 41": [
+    "anchor"
+  ],
+  "PHYSWELL 86": [
+    "component:ACT"
+  ],
+  "POLECON 691": [
+    "cross-listed",
+    "cross-listed with ACCT 691"
+  ],
+  "POLISCI 124L": [
+    "cross-listed",
+    "cross-listed with PSYCH 170"
+  ],
+  "POLISCI 204E": [
+    "cross-listed",
+    "cross-listed with JEWISHST 204E"
+  ],
+  "POLISCI 218P": [
+    "ordinary"
+  ],
+  "POLISCI 324L": [
+    "cross-listed",
+    "cross-listed with PSYCH 170"
+  ],
+  "POLISCI 351C": [
+    "section-units-outside-range"
+  ],
+  "POLISCI 74B": [
+    "cross-listed",
+    "cross-listed with SYMSYS 193"
+  ],
+  "PSYC 149": [
+    "cross-listed",
+    "cross-listed with HUMBIO 161"
+  ],
+  "PSYC 20N": [
+    "ordinary"
+  ],
+  "PSYC 261": [
+    "cross-listed",
+    "cross-listed with HUMBIO 161"
+  ],
+  "PSYCH 1": [
+    "anchor"
+  ],
+  "PSYCH 124": [
+    "cross-listed",
+    "cross-listed with PHIL 124P"
+  ],
+  "PSYCH 170": [
+    "cross-listed",
+    "ordinary"
+  ],
+  "PSYCH 190A": [
+    "cross-listed",
+    "cross-listed with SYMSYS 193"
+  ],
+  "PSYCH 35": [
+    "cross-listed",
+    "cross-listed with SYMSYS 1"
+  ],
+  "PUBLPOL 164": [
+    "cross-listed",
+    "cross-listed with PSYCH 170"
+  ],
+  "PUBLPOL 75B": [
+    "cross-listed",
+    "cross-listed with SYMSYS 193"
+  ],
+  "PWR 1ST": [
+    "ger:Writing 1"
+  ],
+  "PWR 2BRC": [
+    "ger:Writing 2"
+  ],
+  "RAD 210B": [
+    "component:SEM",
+    "cross-listed"
+  ],
+  "REES 204E": [
+    "cross-listed",
+    "cross-listed with JEWISHST 204E"
+  ],
+  "REES 231B": [
+    "cross-listed",
+    "cross-listed with INTNLREL 131"
+  ],
+  "SLAVIC 181": [
+    "cross-listed",
+    "cross-listed with ITALIAN 181"
+  ],
+  "SLE 91": [
+    "ger:GER:IHUM-1"
+  ],
+  "SLE 92": [
+    "ger:College"
+  ],
+  "SOC 100": [
+    "cross-listed",
+    "ger:GER:EC-AmerCul"
+  ],
+  "SOC 190A": [
+    "cross-listed",
+    "cross-listed with SYMSYS 193"
+  ],
+  "SOC 386A": [
+    "partial-quarter"
+  ],
+  "STATS 200Q": [
+    "cross-listed",
+    "cross-listed with DATASCI 200Q"
+  ],
+  "STEMREM 223": [
+    "cross-listed",
+    "cross-listed with IMMUNOL 223"
+  ],
+  "SURG 70Q": [
+    "component:IDS"
+  ],
+  "SYMSYS 1": [
+    "anchor",
+    "cross-listed"
+  ],
+  "SYMSYS 193": [
+    "cross-listed",
+    "multi-meeting"
+  ],
+  "SYMSYS 200": [
+    "cross-listed",
+    "cross-listed with SYMSYS 1"
+  ],
+  "SYMSYS 389A": [
+    "cross-listed",
+    "cross-listed with CSRE 389A"
+  ],
+  "TAPS 124D": [
+    "ger:way_ce"
+  ],
+  "TAPS 138M": [
+    "component:WKS"
+  ],
+  "UKRNLANG 1": [
+    "ordinary"
+  ],
+  "URBANST 110": [
+    "cross-listed",
+    "cross-listed with SOC 100"
+  ],
+  "URBANST 190A": [
+    "cross-listed",
+    "cross-listed with SYMSYS 193"
+  ],
+  "VIETLANG 1": [
+    "ordinary"
+  ],
+  "YORULANG 395": [
+    "arranged-only"
+  ]
+}
