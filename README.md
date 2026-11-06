@@ -8,7 +8,8 @@ Requires [uv](https://docs.astral.sh/uv/), Node 22+ with pnpm, and Docker.
 ```sh
 cp .env.example .env
 make setup
-make db     # Postgres + pgvector on :5432
+make db     # Postgres + pgvector on :5433
+make seed   # load the test snapshot (make seed-full: the whole downloaded catalog)
 make api    # http://localhost:8000/api/health
 make web    # http://localhost:5173
 ```

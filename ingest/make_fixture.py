@@ -12,11 +12,10 @@ import json
 import random
 import xml.etree.ElementTree as ET
 from collections import defaultdict
-from datetime import date, datetime
 from pathlib import Path
 
-# Components that are always "by arrangement": one section per faculty member, no meeting time.
-ARRANGED = frozenset({"INS", "T/D", "CLK"})
+from ingest.parse import ARRANGED_COMPONENTS, parse_date
+
 TARGET_SIZE = 200
 SEED = 146
 
@@ -44,20 +43,12 @@ QUOTAS = {
     "closed": 3,
     "remote": 3,
 }
-MAX_COURSE_BYTES = (
-    300_000  # skip giant courses (hundreds of per-faculty sections) except via anchors
-)
+# Skip giant courses (hundreds of per-faculty sections) except via anchors.
+MAX_COURSE_BYTES = 300_000
 
 
 def course_name(course: ET.Element) -> str:
     return f"{course.findtext('subject')} {course.findtext('code')}"
-
-
-def _parse_date(text: str | None) -> date | None:
-    try:
-        return datetime.strptime(text or "", "%b %d, %Y").date()
-    except ValueError:
-        return None
 
 
 def quirk_tags(course: ET.Element) -> set[str]:
@@ -107,14 +98,14 @@ def quirk_tags(course: ET.Element) -> set[str]:
                 tags.add("end-no-start")
             if {"Saturday", "Sunday"} & set(days):
                 tags.add("weekend")
-            first = _parse_date(schedule.findtext("startDate"))
-            last = _parse_date(schedule.findtext("endDate"))
+            first = parse_date(schedule.findtext("startDate"))
+            last = parse_date(schedule.findtext("endDate"))
             if first is None or last is None:
                 tags.add("no-dates")
             elif (last - first).days <= 42:
                 tags.add("partial-quarter")
 
-    if sections and components <= ARRANGED:
+    if sections and components <= ARRANGED_COMPONENTS:
         tags.add("arranged-only")
     elif not timed:
         tags.add("time-tba")

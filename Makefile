@@ -1,4 +1,4 @@
-.PHONY: setup db db-down fetch fixture api web check check-api check-web
+.PHONY: setup db db-down migrate seed seed-full fetch fixture api web check check-api check-web
 
 setup:  ## Install all dependencies and git hooks
 	uv sync
@@ -10,6 +10,15 @@ db:  ## Start local Postgres (pgvector) in Docker
 
 db-down:
 	docker compose down
+
+migrate:  ## Apply pending schema migrations to the local database
+	uv run python -m db.migrate
+
+seed:  ## Load the test snapshot (~200 courses) into the local database
+	uv run python -m ingest.load --source ingest/fixtures/2026-2027
+
+seed-full:  ## Load the whole downloaded catalog (run `make fetch` first)
+	uv run python -m ingest.load --source data/raw/2026-2027
 
 fetch:  ## Download this year's offered courses from ExploreCourses into data/raw (~5 min)
 	uv run python -m ingest.fetch

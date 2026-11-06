@@ -8,9 +8,16 @@ conflict-free schedule built from real catalog data.
 - `web/` — React + TypeScript (Vite, Tailwind). Dev server proxies `/api` to the FastAPI server on :8000.
 - `api/` — FastAPI routes, Pydantic models, DB queries, Claude tool definitions.
 - `core/` — pure Python scheduling logic (conflict checker, schedule search). No I/O, no LLM calls.
-- `ingest/` — ExploreCourses XML parser and the job that loads the database.
+- `ingest/` — ExploreCourses XML downloader, parser, prerequisite extractor, and database loader.
+- `db/` — database settings, migration runner, and numbered SQL migrations (shared by `api/` and `ingest/`).
 - `evals/` — hand-labeled NL query → expected filter set.
-- Database: Postgres + pgvector, run locally via `docker compose`.
+- Database: Postgres + pgvector via `docker compose`, on host port **5433** (5432 is taken by a local
+  Postgres.app). Tests use a separate `redwood_test` database that they wipe.
+
+Schema changes go in a new `db/migrations/NNNN_name.sql` file; never edit an applied migration.
+Prerequisites: only hard requirements count — `recommended` means "no prerequisites" for filtering.
+Catalog data is refreshed manually (no nightly job); derived fields are recomputed only when a
+description changes.
 
 ## Rules that must not be broken
 
@@ -31,7 +38,9 @@ Do not change these without flagging it to the human first: `core/`, `.github/wo
 
 ```sh
 make setup      # uv sync, pnpm install, install git hooks
-make db         # start Postgres (needs Docker running)
+make db         # start Postgres (needs Docker running); required for `make check`
+make migrate    # apply pending schema migrations
+make seed       # load the test snapshot into the local DB (seed-full: the whole downloaded catalog)
 make fetch      # download this year's catalog into data/raw (gitignored, ~5 min)
 make fixture    # rebuild the test snapshot in ingest/fixtures from data/raw
 make api        # FastAPI on :8000

@@ -10,7 +10,8 @@ services:
       POSTGRES_PASSWORD: redwood
       POSTGRES_DB: redwood
     ports:
-      - "5432:5432"
+      # Host port 5433, because 5432 is often taken by a locally installed Postgres.
+      - "5433:5432"
     volumes:
       - pgdata:/var/lib/postgresql/data
     healthcheck:
