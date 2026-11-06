@@ -8,7 +8,7 @@ from collections.abc import Iterator
 from pathlib import Path
 
 from ingest.make_fixture import ANCHORS, QUOTAS, course_id, quirk_tags
-from ingest.parse import load_catalog
+from ingest.parse import load_listings
 
 FIXTURE_DIR = Path(__file__).parents[1] / "fixtures" / "2026-2027"
 
@@ -24,7 +24,7 @@ def _courses() -> Iterator[ET.Element]:
 
 
 def test_snapshot_matches_manifest() -> None:
-    names = {f"{c.subject} {c.code}" for c in load_catalog(FIXTURE_DIR)}
+    names = {f"{c.subject} {c.code}" for c in load_listings(FIXTURE_DIR)}
     assert names == set(_manifest())
 
 

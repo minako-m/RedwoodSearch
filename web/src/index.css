@@ -1,1 +1,36 @@
 @import "tailwindcss";
+
+/* Palette: warm bark browns and deep redwood greens on a cream background. */
+@theme {
+  --color-cream: #fbf7f0;
+
+  --color-bark-50: #f8f2ea;
+  --color-bark-100: #efe3d3;
+  --color-bark-200: #dfc7a9;
+  --color-bark-300: #c8a47c;
+  --color-bark-400: #ad8157;
+  --color-bark-500: #8f623e;
+  --color-bark-600: #734d31;
+  --color-bark-700: #5a3c27;
+  --color-bark-800: #422c1e;
+  --color-bark-900: #2d1e15;
+
+  --color-redwood-50: #eef6f1;
+  --color-redwood-100: #d7eadd;
+  --color-redwood-200: #b0d4bd;
+  --color-redwood-300: #82b697;
+  --color-redwood-400: #559570;
+  --color-redwood-500: #387754;
+  --color-redwood-600: #2a5e42;
+  --color-redwood-700: #224c36;
+  --color-redwood-800: #1c3e2d;
+  --color-redwood-900: #142d21;
+
+  --font-sans: "Nunito", ui-rounded, system-ui, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-cream font-sans text-bark-900 antialiased;
+  }
+}

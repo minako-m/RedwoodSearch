@@ -1,18 +1,23 @@
-from functools import cache
+from collections.abc import Iterator
 from typing import Annotated
 
-from fastapi import Depends, FastAPI
+import psycopg
+from fastapi import Depends, FastAPI, HTTPException
 
-from api.settings import settings
-from ingest.parse import CourseSummary, load_catalog
+from api import queries
+from api.models import CourseDetail, CourseSummary
+from db.settings import db_settings
 
 app = FastAPI(title="RedwoodSearch API")
 
 
-@cache
-def catalog() -> list[CourseSummary]:
-    # Parsed once per process (~2 s for the full catalog). Replaced by DB queries in Step 2.
-    return load_catalog(settings.raw_catalog_dir)
+def get_conn() -> Iterator[psycopg.Connection]:
+    # One short-lived connection per request; plenty at pilot scale.
+    with psycopg.connect(db_settings.database_url) as conn:
+        yield conn
+
+
+Conn = Annotated[psycopg.Connection, Depends(get_conn)]
 
 
 @app.get("/api/health")
@@ -21,5 +26,13 @@ def health() -> dict[str, str]:
 
 
 @app.get("/api/courses")
-def list_courses(courses: Annotated[list[CourseSummary], Depends(catalog)]) -> list[CourseSummary]:
-    return courses
+def list_courses(conn: Conn) -> list[CourseSummary]:
+    return queries.list_courses(conn)
+
+
+@app.get("/api/courses/{subject}/{code}")
+def get_course(subject: str, code: str, conn: Conn) -> CourseDetail:
+    course = queries.get_course(conn, subject, code)
+    if course is None:
+        raise HTTPException(status_code=404, detail=f"No course {subject} {code}")
+    return course

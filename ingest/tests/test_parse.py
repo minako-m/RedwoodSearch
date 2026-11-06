@@ -8,7 +8,6 @@ from ingest.parse import (
     Meeting,
     classify_timing,
     clean_description,
-    load_catalog,
     load_listings,
     normalize_ger,
     parse_days,
@@ -175,11 +174,11 @@ def _course(subject: str, code: str) -> bytes:
     ).encode()
 
 
-def test_load_catalog_sorts_by_subject_then_number(tmp_path: Path) -> None:
+def test_load_listings_sorts_by_subject_then_number(tmp_path: Path) -> None:
     cs = b"<xml><courses>" + _course("CS", "106B") + _course("CS", "9") + _course("CS", "106A")
     (tmp_path / "CS.xml.gz").write_bytes(gzip.compress(cs + b"</courses></xml>"))
     aa = b"<xml><courses>" + _course("AA", "100") + b"</courses></xml>"
     (tmp_path / "AA.xml.gz").write_bytes(gzip.compress(aa))
 
-    names = [f"{c.subject} {c.code}" for c in load_catalog(tmp_path)]
+    names = [f"{c.subject} {c.code}" for c in load_listings(tmp_path)]
     assert names == ["AA 100", "CS 9", "CS 106A", "CS 106B"]

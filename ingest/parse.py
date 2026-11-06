@@ -15,7 +15,6 @@ from typing import Literal
 
 from pydantic import BaseModel
 
-TERM_ORDER = ("Autumn", "Winter", "Spring", "Summer")
 # Components that are always "by arrangement": one section per faculty member, no meeting time.
 ARRANGED_COMPONENTS = frozenset({"INS", "T/D", "CLK"})
 DAY_BITS = {
@@ -98,19 +97,6 @@ class Listing(BaseModel):
     @property
     def name(self) -> str:
         return f"{self.subject} {self.code}"
-
-
-class CourseSummary(BaseModel):
-    """The short form the course list page shows."""
-
-    subject: str
-    code: str
-    title: str
-    units_min: int
-    units_max: int
-    gers: list[str]
-    terms: list[str]  # quarters with at least one section, in academic-year order
-    career: str | None
 
 
 # --- field-level cleanup -------------------------------------------------------------------------
@@ -278,7 +264,7 @@ def parse_listings(xml: bytes) -> Iterator[Listing]:
         )
 
 
-def sort_key(listing: Listing | CourseSummary) -> tuple[str, int, str]:
+def sort_key(listing: Listing) -> tuple[str, int, str]:
     """Order like the catalog: by subject, then course number numerically (CS 9 before CS 106B)."""
     match = re.match(r"(\d*)(.*)", listing.code)
     number, suffix = match.groups() if match else ("", listing.code)
@@ -293,22 +279,3 @@ def load_listings(raw_dir: Path) -> list[Listing]:
         for listing in parse_listings(gzip.decompress(path.read_bytes()))
     ]
     return sorted(listings, key=sort_key)
-
-
-def summarize(listing: Listing) -> CourseSummary:
-    quarters = {s.term.rsplit(" ", 1)[-1] for s in listing.sections}
-    return CourseSummary(
-        subject=listing.subject,
-        code=listing.code,
-        title=listing.title,
-        units_min=listing.units_min,
-        units_max=listing.units_max,
-        gers=listing.gers,
-        terms=[q for q in TERM_ORDER if q in quarters],
-        career=listing.career,
-    )
-
-
-def load_catalog(raw_dir: Path) -> list[CourseSummary]:
-    """Course summaries for the list page, in catalog order."""
-    return [summarize(listing) for listing in load_listings(raw_dir)]
